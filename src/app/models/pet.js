@@ -10,6 +10,12 @@ var Pet = Backbone.Model.extend({
     vaccinated: false
   },
 
+  initialize: function(params) {
+  console.log("Starting", params);
+  // this.logStatus();
+  }
+
+
 });
 
 export default Pet;
