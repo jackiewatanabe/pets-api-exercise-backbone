@@ -25,7 +25,7 @@ var PetListView = Backbone.View.extend({
         // tagName: 'li'
       });
       // rendered the view and appended it to 'todo-items'
-      that.$('#pet').append(myPetView.render().el);
+      that.$('#pet-list').append(myPetView.render().el);
       // console.log("****Yo breadcrumb #3xx***");
     });
     // returning this view object so you can chain functions like myView.render().el
