@@ -13,9 +13,27 @@
       <h1>Pets!</h1>
     </header>
     <main>
+      <aside class="small-11 large-3 medium-3 columns add-pet">
+        <h2>Add a pet</h2>
+          <section class="row" id="title-section">
+            <label class="columns medium-12">Title
+              <input type="text" name="title" id="name" placeholder="Enter the name here" />
+            </label>
+          </section>
+          <section class="row" id="description-section">
+            <label class="columns medium-12">Description
+              <textarea id="description" placeholder="None"></textarea>
+            </label>
+          </section>
+
+            <button id="add-pet" class="medium-3 columns button success">Add a pet</button>
+          </section>
+      </aside>
       <section id='pet'></section>
       <section id='pet-list'></section>
       <section id='new-pet'></section>
+
+
     </main>
 
     <!-- Templates -->
@@ -36,6 +54,6 @@
     </script>
 
     <script src="/app.bundle.js"></script>
-    
+
   </body>
   </html>
