@@ -6,6 +6,7 @@ var Pet = Backbone.Model.extend({
     name: 'DEFAULT',
     age: 0,
     breed: '',
+    about: '',
     vaccinated: false
   },
 
