@@ -40,6 +40,7 @@ var PetListView = Backbone.View.extend({
   },
 
   petDeets: function(bob) {
+    $('.add-pet').empty();
     $('#pet-list').empty();
     // $('#pet').show();
 
