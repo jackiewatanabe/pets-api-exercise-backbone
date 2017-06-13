@@ -15,14 +15,24 @@
     <main>
       <aside class="small-11 large-3 medium-3 columns add-pet">
         <h2>Add a pet</h2>
-          <section class="row" id="title-section">
+          <section class="row" id="name-section">
             <label class="columns medium-12">Title
               <input type="text" name="title" id="name" placeholder="Enter the name here" />
             </label>
           </section>
+          <section class="row" id="breed-section">
+            <label class="columns medium-12">Breed
+              <input type="text" id="breed" placeholder="None"></input>
+            </label>
+          </section>
+          <section class="row" id="age-section">
+            <label class="columns medium-12">Age
+              <input type="text" id="age" placeholder="None"></input>
+            </label>
+          </section>
           <section class="row" id="description-section">
-            <label class="columns medium-12">Description
-              <textarea id="description" placeholder="None"></textarea>
+            <label class="columns medium-12">About
+              <textarea id="about" placeholder="None"></textarea>
             </label>
           </section>
 
@@ -39,7 +49,11 @@
     <!-- Templates -->
 
     <script id="pet-card-template" type="text/template">
-      <li><%- pet.name %></li>
+      <li><%- pet.name %>      <button class="button alert">
+              Delete
+            </button>
+      </li>
+
     </script>
 
     <script id="pet-info-template" type="text/template">
@@ -51,7 +65,9 @@
       <% }else{ %>
         <input type="checkbox" name="vaccinated">
       <% } %>
-    </script>
+
+
+      </script>
 
     <script src="/app.bundle.js"></script>
 

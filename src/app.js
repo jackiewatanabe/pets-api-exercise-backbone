@@ -32,6 +32,7 @@ $(document).ready(function() {
   var myPetListView = new PetListView({
     model: myPetList,
     template: _.template($('#pet-card-template').html()),
+    detailsTemplate: _.template($('#pet-info-template').html()),
     el: 'main'
   });
 

@@ -1,4 +1,5 @@
 import Backbone from 'backbone';
+import $ from 'jquery';
 // import Pet from 'app/models/pet';
 
 var PetView = Backbone.View.extend({
@@ -16,7 +17,23 @@ var PetView = Backbone.View.extend({
     this.$el.html(compiledTemplate);
 
     return this;
+  },
+
+  events: {
+    'click button.alert': 'deletePet',
+    'click li': 'showDetails'
+  },
+
+  deletePet: function() {
+    this.model.destroy();
+  },
+
+  showDetails: function() {
+    console.log("clicked showDetails");
+
+    this.trigger("selected", this.model);
   }
+
 
 });
 
