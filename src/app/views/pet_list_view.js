@@ -16,7 +16,7 @@ var PetListView = Backbone.View.extend({
 
   render: function() {
 
-    // this.$('.todo-items').empty();
+    this.$('#pet-list').empty();
     var that = this;
 
     // looped through collection
@@ -77,6 +77,7 @@ var PetListView = Backbone.View.extend({
   addPet: function() {
     var pet = new Pet(this.getFormData());
     this.model.create(pet);
+    console.log(pet);
   }
 
 

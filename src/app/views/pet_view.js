@@ -26,6 +26,7 @@ var PetView = Backbone.View.extend({
 
   deletePet: function() {
     this.model.destroy();
+    console.log("Deleted");
   },
 
   showDetails: function() {

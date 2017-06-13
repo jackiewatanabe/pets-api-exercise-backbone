@@ -17,7 +17,7 @@
         <h2>Add a pet</h2>
           <section class="row" id="name-section">
             <label class="columns medium-12">Title
-              <input type="text" name="title" id="name" placeholder="Enter the name here" />
+              <input type="text" name="name" id="name" placeholder="Enter the name here" />
             </label>
           </section>
           <section class="row" id="breed-section">
@@ -49,10 +49,9 @@
     <!-- Templates -->
 
     <script id="pet-card-template" type="text/template">
-      <li><%- pet.name %>      <button class="button alert">
-              Delete
-            </button>
-      </li>
+      <li><%- pet.name %></li><button class="button alert">
+            Delete
+      </button>
 
     </script>
 
@@ -60,11 +59,12 @@
       <h3>Name: <%- pet.name %></h3>
       <h4>Age: <%- pet.age %></h4>
       <h4>Breed: <%- pet.breed %></h4>
+      <h4>Vaccinated:
       <% if(pet.vaccinated){ %>
         <input type="checkbox" name="vaccinated" checked="checked">
       <% }else{ %>
         <input type="checkbox" name="vaccinated">
-      <% } %>
+      <% } %></h4>
 
 
       </script>
